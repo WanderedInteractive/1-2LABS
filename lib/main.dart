@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+
 void main() {
   runApp(const MyApp());
 }
@@ -7,113 +9,143 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
-
-      home: MainPage(),
+      home: HomePage(),
     );
   }
 }
-class MainPage extends StatelessWidget {
-  const MainPage({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage ({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.deepPurpleAccent, title: const Text('Column',  style: TextStyle(color: Colors.white60,),),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.all(5),
-              width: 200,
-              height: 85,
-              decoration: BoxDecoration(
-                color: Colors.black12,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: const Center(
-                child: Text('Строка 1', style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 32,
-                ),
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.all(5),
-              width: 200,
-              height: 85,
-              decoration: BoxDecoration(
-                color: Colors.black26,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: const Center(
-                child: Text('Строка 2', style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 32,
-                ),
-                ),
-              ),
-            ),
+    return  Scaffold(
+        body: Container(
+            padding:  EdgeInsets.only(top: 8),
+            child: Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      children: <Widget>[
+                        Expanded( flex: 4,
+                            child:
+                            Container(
+                              width: double.maxFinite,
+                              height: double.maxFinite,
+                              margin: EdgeInsets.only(bottom: 8, left: 8),
+                              color: Colors.redAccent,
+                              alignment: Alignment.center,
+                              child: Text('6', style: TextStyle(fontSize: 30, color: Colors.black),
+                              ),
 
-            Container(
-              margin: EdgeInsets.all(5),
-              width: 200,
-              height: 85,
-              decoration: BoxDecoration(
-                color: Colors.black38,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: const Center(
-                child: Text('Строка 3', style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 32,
-                ),
-                ),
-              ),
-            ),
+                            )
+                        ),
 
-            Container(
-              margin: EdgeInsets.all(5),
-              width: 200,
-              height: 85,
-              decoration: BoxDecoration(
-                color: Colors.black45,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: const Center(
-                child: Text('Строка 4', style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 32,
-                ),
-                ),
-              ),
-            ),
+                        Expanded( flex: 1,
+                            child: Container(
+                              width: double.maxFinite,
+                              height: double.maxFinite,
+                              margin: EdgeInsets.only(bottom: 8, left: 8),
+                              color: Colors.brown,
+                              alignment: Alignment.center,
+                              child: Text('8', style: TextStyle(fontSize: 30, color: Colors.black),
+                              ),
 
-            Container(
-              margin: EdgeInsets.all(5),
-              width: 200,
-              height: 85,
-              decoration: BoxDecoration(
-                color: Colors.black54,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: const Center(
-                child: Text('Строка 5', style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 32,
-                ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+                            )
+                        ),
+                        Expanded( flex: 1,
+                            child: Container(
+                              width: double.maxFinite,
+                              height: double.maxFinite,
+                              margin: EdgeInsets.only(bottom: 8, left: 8),
+                              color: Colors.blue[900],
+                              alignment: Alignment.center,
+                              child: Text('1', style: TextStyle(fontSize: 30, color: Colors.black),
+                              ),
+
+                            )
+                        ),
+                        Expanded( flex: 4,
+                            child:
+                            Container(
+                              width: double.maxFinite,
+                              height: double.maxFinite,
+                              margin: EdgeInsets.only(bottom: 8, left: 8),
+                              color: Colors.brown,
+                              alignment: Alignment.center,
+                              child: Text('5', style: TextStyle(fontSize: 30, color: Colors.black),
+                              ),
+
+                            )
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                      flex: 1,
+                      child: Column(
+                          children: <Widget>[
+                            Expanded( flex: 4,
+                                child:
+                                Container(
+                                  width: double.maxFinite,
+                                  height: double.maxFinite,
+                                  margin: EdgeInsets.only(bottom: 8, left: 8, right: 8),
+                                  color: Colors.deepOrange,
+                                  alignment: Alignment.center,
+                                  child: Text('2', style: TextStyle(fontSize: 30, color: Colors.black),
+                                  ),
+
+                                )
+                            ),
+
+                            Expanded( flex: 1,
+                                child: Container(
+                                  width: double.maxFinite,
+                                  height: double.maxFinite,
+                                  margin: EdgeInsets.only(bottom: 8, left: 8, right: 8),
+                                  color: Colors.orange[700],
+                                  alignment: Alignment.center,
+                                  child: Text('7', style: TextStyle(fontSize: 30, color: Colors.black),
+                                  ),
+
+                                )
+                            ),
+                            Expanded( flex: 1,
+                                child: Container(
+                                  width: double.maxFinite,
+                                  height: double.maxFinite,
+                                  margin: EdgeInsets.only(bottom: 8, left: 8, right: 8),
+                                  color: Colors.pinkAccent,
+                                  alignment: Alignment.center,
+                                  child: Text('3', style: TextStyle(fontSize: 30, color: Colors.black),
+                                  ),
+
+                                )
+                            ),
+                            Expanded( flex: 4,
+                                child:
+                                Container(
+                                  width: double.maxFinite,
+                                  height: double.maxFinite,
+                                  margin: EdgeInsets.only(bottom: 8, left: 8, right: 8),
+                                  color: Colors.greenAccent,
+                                  alignment: Alignment.center,
+                                  child: Text('4', style: TextStyle(fontSize: 30, color: Colors.black),
+                                  ),
+
+                                )
+                            ),
+                          ]
+                      )
+                  )
+                ]
+            )
+        )
     );
   }
 }
